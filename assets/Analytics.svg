@@ -1,0 +1,26 @@
+<!-- SVG Analytics Console Image -->
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <defs>
+    <linearGradient id="analyticsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" fill="url(#analyticsGradient)"/>
+  <!-- Bar Chart -->
+  <rect x="60" y="160" width="20" height="60" fill="#FFF" opacity="0.8"/>
+  <rect x="90" y="140" width="20" height="80" fill="#FFF" opacity="0.8"/>
+  <rect x="120" y="120" width="20" height="100" fill="#FFF" opacity="0.8"/>
+  <rect x="150" y="100" width="20" height="120" fill="#FFF" opacity="0.8"/>
+  <!-- Line Chart -->
+  <path d="M220 180 L250 160 L280 140 L310 120 L340 100" stroke="#FFF" stroke-width="3" fill="none"/>
+  <circle cx="220" cy="180" r="4" fill="#FFF"/>
+  <circle cx="250" cy="160" r="4" fill="#FFF"/>
+  <circle cx="280" cy="140" r="4" fill="#FFF"/>
+  <circle cx="310" cy="120" r="4" fill="#FFF"/>
+  <circle cx="340" cy="100" r="4" fill="#FFF"/>
+  <text x="200" y="50" text-anchor="middle" fill="#FFF" font-family="Arial" font-size="24" font-weight="bold">Analytics Dashboard</text>
+  <text x="100" y="240" text-anchor="middle" fill="#FFF" font-family="Arial" font-size="12">Usage Stats</text>
+  <text x="300" y="240" text-anchor="middle" fill="#FFF" font-family="Arial" font-size="12">Trends</text>
+</svg>
