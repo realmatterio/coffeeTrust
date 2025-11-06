@@ -1,0 +1,25 @@
+{
+  "name": "Coffee Bean Trust",
+  "short_name": "CoffeeTrust",
+  "description": "Blockchain-verified coffee supply chain traceability platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F5DC",
+  "theme_color": "#8B4513",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Ccircle cx='96' cy='96' r='96' fill='%238B4513'/%3E%3Cpath d='M96 48c-26.5 0-48 21.5-48 48 0 8 2 15.5 5.5 22l8.5 14.5c3 5 8.5 8 14.5 8h39c6 0 11.5-3 14.5-8l8.5-14.5c3.5-6.5 5.5-14 5.5-22 0-26.5-21.5-48-48-48z' fill='%23FFF'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='256' fill='%238B4513'/%3E%3Cpath d='M256 128c-70.7 0-128 57.3-128 128 0 21.3 5.3 41.3 14.7 58.7l22.6 38.6c8 13.3 22.7 21.3 38.7 21.3h104c16 0 30.7-8 38.7-21.3l22.6-38.6c9.4-17.4 14.7-37.4 14.7-58.7 0-70.7-57.3-128-128-128z' fill='%23FFF'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "food", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}

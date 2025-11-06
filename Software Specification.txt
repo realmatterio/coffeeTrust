@@ -1,0 +1,22 @@
+Built Coffee Bean Trust - a blockchain-verified supply chain traceability platform showing coffee's journey from farm to cup with certifications, quality scores, and transparent tracking.
+
+Key Features:
+
+Consumer interface to track coffee from farm to cup
+Interactive supply chain journey visualization
+Certification management (organic, fair trade, quality scores)
+Real-time batch tracking with blockchain verification
+Beautiful, trustworthy design with coffee aesthetics
+Design Language:
+
+Warm earth tones: rich browns, coffee cream, forest greens, gold accents
+Premium, sophisticated feel like high-end coffee brands
+Smooth animations showing bean journey
+Mobile-optimized for in-store scanning
+App Structure:
+
+Entities: Coffee batches, supply chain events, certifications, participants
+Pages: Consumer search/lookup, detailed batch journey view
+Components: Timeline visualization, certification badges, participant cards, trust indicators
+
+Added Trace cobsole, Analytics console, and Certifications console with navigation buttons - now users can view full journey, explore supply chain analytics, and check certificates from both home page and batch details.
