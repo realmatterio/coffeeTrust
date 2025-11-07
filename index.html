@@ -20,10 +20,10 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <div class="logo">
+            <button class="logo" id="logoBtn">
                 <i class="fas fa-coffee"></i>
                 <span>Coffee Bean Trust</span>
-            </div>
+            </button>
             <div class="header-actions">
                 <button class="search-btn" id="searchBtn">
                     <i class="fas fa-search"></i>
@@ -57,6 +57,9 @@
                 </a></li>
                 <li><a href="#" data-page="certifications" class="nav-link">
                     <i class="fas fa-certificate"></i> Certifications
+                </a></li>
+                <li><a href="#" data-page="carbon" class="nav-link">
+                    <i class="fas fa-leaf"></i> Carbon Credits
                 </a></li>
             </ul>
         </div>
@@ -163,6 +166,18 @@
                         <h3>Certifications Console</h3>
                         <p>Verify organic, fair trade, and quality certifications</p>
                         <button class="console-btn">Check Certificates</button>
+                    </div>
+                    
+                    <div class="console-card" data-page="carbon">
+                        <div class="console-image">
+                            <i class="fas fa-seedling carbon-credit-icon"></i>
+                        </div>
+                        <div class="console-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Carbon Credits Console</h3>
+                        <p>Estimate carbon credits from sustainable coffee farming practices</p>
+                        <button class="console-btn">Calculate Credits</button>
                     </div>
                 </div>
             </div>
@@ -316,6 +331,124 @@
             <!-- Certifications Grid -->
             <div class="certifications-grid" id="certificationsGrid">
                 <!-- Certifications will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Carbon Credits Console Page -->
+        <section class="page" id="carbonPage" style="display: none;">
+            <div class="page-header">
+                <div class="page-title">
+                    <i class="fas fa-leaf carbon-credit-icon"></i>
+                    <h1>Carbon Credits Console</h1>
+                </div>
+                <p class="page-subtitle">Estimate carbon credits generated from sustainable coffee farming practices</p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-input-container">
+                        <input type="text" id="carbonSearchInput" placeholder="Enter batch ID to calculate carbon credits">
+                        <button class="search-submit" id="carbonSearchSubmit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-actions">
+                        <div class="dropdown-wrapper">
+                            <button class="dropdown-btn" id="carbonDropdownBtn" type="button">
+                                <i class="fas fa-chevron-down"></i>
+                                Select Coffee Batch
+                            </button>
+                            <div class="dropdown-menu" id="carbonDropdownMenu">
+                                <div class="dropdown-item" data-value="CB2024001234">CB2024001234 - Ethiopian Yirgacheffe</div>
+                                <div class="dropdown-item" data-value="CB2024005678">CB2024005678 - Colombian Supremo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carbon Credit Calculator -->
+            <div class="carbon-calculator" id="carbonCalculator" style="display: none;">
+                <div class="calculator-header">
+                    <h2>Carbon Credit Estimation</h2>
+                    <div class="batch-info">
+                        <span class="batch-id" id="carbonBatchId"></span>
+                        <span class="batch-name" id="carbonBatchName"></span>
+                    </div>
+                </div>
+
+                <div class="carbon-metrics">
+                    <div class="metric-card co2-sequestered">
+                        <div class="metric-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>CO₂ Sequestered</h3>
+                            <div class="metric-value" id="co2Sequestered">0</div>
+                            <div class="metric-unit">tonnes CO₂</div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card carbon-credits">
+                        <div class="metric-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Carbon Credits</h3>
+                            <div class="metric-value" id="carbonCredits">0</div>
+                            <div class="metric-unit">credits generated</div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card credit-value">
+                        <div class="metric-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Estimated Value</h3>
+                            <div class="metric-value" id="creditValue">$0</div>
+                            <div class="metric-unit">USD market value</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farming Practices Impact -->
+                <div class="practices-impact">
+                    <h3>Sustainable Farming Practices Impact</h3>
+                    <div class="practices-grid" id="practicesGrid">
+                        <!-- Practices will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Calculation Details -->
+                <div class="calculation-details">
+                    <h3>Carbon Credit Calculation Methodology</h3>
+                    <div class="calculation-grid" id="calculationGrid">
+                        <!-- Calculation details will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="calculation-formula">
+                        <h4>Formula</h4>
+                        <div class="formula-box">
+                            <div class="formula-text">
+                                <strong>Total Carbon Credits = Σ (Practice Impact × Area × Time Factor × Verification Factor)</strong>
+                            </div>
+                            <div class="formula-explanation">
+                                Where each sustainable practice contributes based on its carbon sequestration potential, 
+                                farm area coverage, implementation duration, and third-party verification status.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carbon Timeline -->
+                <div class="carbon-timeline">
+                    <h3>Carbon Impact Timeline</h3>
+                    <div class="timeline-container" id="carbonTimeline">
+                        <!-- Timeline will be populated by JavaScript -->
+                    </div>
+                </div>
             </div>
         </section>
     </main>
