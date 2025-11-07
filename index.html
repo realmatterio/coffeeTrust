@@ -102,8 +102,10 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <div class="coffee-animation">
-                        <img src="assets/Cup_icon.svg" alt="Coffee Cup" style="width: 60px; height: 60px;">
+                    <div class="help-button-container">
+                        <button class="help-btn" id="helpBtn" title="How to use this app">
+                            <img src="assets/help-cup.svg" alt="Help" class="help-cup-icon">
+                        </button>
                     </div>
                 </div>
             </div>
@@ -170,7 +172,7 @@
                     
                     <div class="console-card" data-page="carbon">
                         <div class="console-image">
-                            <i class="fas fa-seedling carbon-credit-icon"></i>
+                            <img src="assets/carbon.svg" alt="Carbon Credits Console">
                         </div>
                         <div class="console-icon">
                             <i class="fas fa-leaf"></i>
@@ -337,10 +339,10 @@
         <!-- Carbon Credits Console Page -->
         <section class="page" id="carbonPage" style="display: none;">
             <div class="page-header">
-                <div class="page-title">
-                    <i class="fas fa-leaf carbon-credit-icon"></i>
-                    <h1>Carbon Credits Console</h1>
+                <div class="page-header-image">
+                    <img src="assets/carbon.svg" alt="Carbon Credits Console">
                 </div>
+                <h1>Carbon Credits Console</h1>
                 <p class="page-subtitle">Estimate carbon credits generated from sustainable coffee farming practices</p>
             </div>
 
@@ -452,6 +454,67 @@
             </div>
         </section>
     </main>
+
+    <!-- Help Modal -->
+    <div class="modal" id="helpModal">
+        <div class="modal-overlay" id="helpModalOverlay"></div>
+        <div class="modal-content help-modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-question-circle"></i> How to Use Coffee Bean Trust</h3>
+                <button class="modal-close" id="helpModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body help-modal-body">
+                <div class="help-section">
+                    <h4><i class="fas fa-home"></i> Getting Started</h4>
+                    <p>Coffee Bean Trust tracks your coffee from farm to cup using blockchain technology. Start by searching for a coffee batch or exploring our consoles.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4><i class="fas fa-search"></i> Search for Coffee</h4>
+                    <ul>
+                        <li><strong>Enter Batch ID:</strong> Type a batch ID like <code>CB2024001234</code> or <code>CB2024005678</code></li>
+                        <li><strong>Use Dropdown:</strong> Click the dropdown to select from available batches</li>
+                        <li><strong>QR Scan:</strong> Click "Scan QR" to simulate scanning a coffee package</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4><i class="fas fa-route"></i> Trace Console</h4>
+                    <p>Follow your coffee's complete journey from farm to your cup. View detailed supply chain information, quality scores, and certifications.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4><i class="fas fa-chart-bar"></i> Analytics Console</h4>
+                    <p>Explore supply chain metrics, participant statistics, and blockchain activity trends with interactive charts.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4><i class="fas fa-certificate"></i> Certifications Console</h4>
+                    <p>Verify organic, fair trade, and quality certifications for coffee facilities and producers.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4><i class="fas fa-leaf"></i> Carbon Credits Console</h4>
+                    <p>Calculate carbon credits generated from sustainable farming practices. View detailed breakdowns of environmental impact and farming methods.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4><i class="fas fa-mobile-alt"></i> Mobile Features</h4>
+                    <ul>
+                        <li><strong>Responsive Design:</strong> Optimized for mobile scanning and in-store use</li>
+                        <li><strong>Touch Navigation:</strong> Swipe and tap to explore coffee information</li>
+                        <li><strong>Quick Access:</strong> Use the menu button to navigate between consoles</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section help-footer">
+                    <p><strong>Sample Data:</strong> Try searching for <code>CB2024001234</code> (Ethiopian Yirgacheffe) or <code>CB2024005678</code> (Colombian Supremo) to explore the app features.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Batch Detail Modal -->
     <div class="modal" id="batchModal">
