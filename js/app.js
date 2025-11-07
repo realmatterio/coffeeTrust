@@ -19,6 +19,7 @@ class CoffeeBeanTrust {
     // Bind all event listeners
     bindEvents() {
         // Navigation events
+        document.getElementById('logoBtn').addEventListener('click', () => this.navigateToPage('home'));
         document.getElementById('menuBtn').addEventListener('click', () => this.toggleMenu());
         document.getElementById('navClose').addEventListener('click', () => this.closeMenu());
         document.getElementById('navOverlay').addEventListener('click', () => this.closeMenu());
@@ -60,6 +61,16 @@ class CoffeeBeanTrust {
         document.getElementById('certSearchInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') this.performCertSearch();
         });
+
+        // Carbon credits search (add listeners only if elements exist)
+        const carbonSearchSubmit = document.getElementById('carbonSearchSubmit');
+        const carbonSearchInput = document.getElementById('carbonSearchInput');
+        if (carbonSearchSubmit && carbonSearchInput) {
+            carbonSearchSubmit.addEventListener('click', () => this.performCarbonSearch());
+            carbonSearchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') this.performCarbonSearch();
+            });
+        }
 
         // Modal events
         document.getElementById('batchModalClose').addEventListener('click', () => this.closeModal('batchModal'));
@@ -105,13 +116,18 @@ class CoffeeBeanTrust {
                 
                 const item = e.target;
                 const wrapper = item.closest('.dropdown-wrapper');
-                const container = item.closest('.search-container, .trace-search, .cert-search');
+                const container = item.closest('.search-container, .trace-search, .cert-search, .search-section');
                 const input = container.querySelector('input');
                 const menu = wrapper.querySelector('.dropdown-menu');
                 
                 if (input && menu) {
                     input.value = item.dataset.value;
                     this.closeDropdown(menu);
+                    
+                    // Auto-trigger search for carbon credits
+                    if (input.id === 'carbonSearchInput') {
+                        this.calculateCarbonCredits(input.value);
+                    }
                 }
             }
             
@@ -177,6 +193,9 @@ class CoffeeBeanTrust {
                 break;
             case 'certifications':
                 this.loadCertificationsPage();
+                break;
+            case 'carbon':
+                this.loadCarbonPage();
                 break;
         }
         
@@ -367,6 +386,20 @@ class CoffeeBeanTrust {
             this.displayCertifications(results);
         } else {
             this.loadCertificationsPage();
+        }
+    }
+
+    performCarbonSearch() {
+        const batchId = document.getElementById('carbonSearchInput').value.trim();
+        
+        if (batchId) {
+            this.calculateCarbonCredits(batchId);
+        } else {
+            // Hide calculator if no input
+            const calculator = document.getElementById('carbonCalculator');
+            if (calculator) {
+                calculator.style.display = 'none';
+            }
         }
     }
 
@@ -741,6 +774,193 @@ class CoffeeBeanTrust {
         `;
         
         this.openModal('certModal');
+    }
+
+    // Carbon Credits page methods
+    loadCarbonPage() {
+        // Ensure event listeners are set up for carbon page
+        this.setupCarbonEventListeners();
+    }
+
+    setupCarbonEventListeners() {
+        // Set up carbon search functionality
+        const searchInput = document.getElementById('carbonSearchInput');
+        const searchSubmit = document.getElementById('carbonSearchSubmit');
+        
+        if (searchInput && searchSubmit) {
+            // Add event listeners directly
+            const handleCarbonSearch = () => {
+                this.performCarbonSearch();
+            };
+            
+            searchSubmit.onclick = handleCarbonSearch;
+            searchInput.onkeypress = (e) => {
+                if (e.key === 'Enter') {
+                    handleCarbonSearch();
+                }
+            };
+        }
+    }
+
+    setupCarbonSearch() {
+        // This method is no longer needed as we use event delegation
+        // Search functionality is handled by the main event delegation system
+    }
+
+    calculateCarbonCredits(batchId) {
+        const batch = dataUtils.findBatch(batchId);
+        
+        if (!batch) {
+            alert('Batch not found. Try CB2024001234 or CB2024005678');
+            return;
+        }
+
+        if (!batch.carbonCredits) {
+            alert('Carbon credits data not available for this batch');
+            return;
+        }
+
+        // Show the calculator section
+        const calculator = document.getElementById('carbonCalculator');
+        if (calculator) {
+            calculator.style.display = 'block';
+        }
+
+        // Update batch info
+        const batchIdElement = document.getElementById('carbonBatchId');
+        const batchNameElement = document.getElementById('carbonBatchName');
+        
+        if (batchIdElement) batchIdElement.textContent = batch.id;
+        if (batchNameElement) batchNameElement.textContent = batch.name;
+
+        // Animate the metrics
+        this.animateCarbonMetrics(batch.carbonCredits);
+
+        // Display farming practices
+        this.displayFarmingPractices(batch.carbonCredits.farmingPractices);
+
+        // Display calculation details
+        this.displayCalculationDetails(batch.carbonCredits.calculationDetails);
+
+        // Display carbon timeline
+        this.displayCarbonTimeline(batch.carbonCredits.timeline);
+    }
+
+    animateCarbonMetrics(carbonData) {
+        // Animate CO2 sequestered
+        this.animateValue('co2Sequestered', 0, carbonData.co2Sequestered, 2000, 1);
+        
+        // Animate carbon credits
+        this.animateValue('carbonCredits', 0, carbonData.creditsGenerated, 2200, 1);
+        
+        // Animate estimated value
+        this.animateValue('creditValue', 0, carbonData.estimatedValue, 2400, 0, '$');
+    }
+
+    animateValue(elementId, start, end, duration, decimals = 0, prefix = '') {
+        const element = document.getElementById(elementId);
+        const startTime = performance.now();
+        
+        const updateValue = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const currentValue = start + (end - start) * easeOut;
+            
+            element.textContent = prefix + currentValue.toFixed(decimals);
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateValue);
+            }
+        };
+        
+        requestAnimationFrame(updateValue);
+    }
+
+    displayFarmingPractices(practices) {
+        const container = document.getElementById('practicesGrid');
+        
+        container.innerHTML = practices.map(practice => `
+            <div class="practice-card">
+                <div class="practice-icon">
+                    <i class="fas ${this.getPracticeIcon(practice.practice)}"></i>
+                </div>
+                <div class="practice-content">
+                    <h4>${practice.practice}</h4>
+                    <div class="practice-impact">${practice.impact}</div>
+                    <p>${practice.description}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    displayCalculationDetails(calculations) {
+        const container = document.getElementById('calculationGrid');
+        
+        container.innerHTML = calculations.map(calc => `
+            <div class="calculation-card">
+                <div class="calc-header">
+                    <h4>${calc.element}</h4>
+                    <div class="calc-contribution">${calc.contribution}</div>
+                </div>
+                
+                <div class="calc-details">
+                    <div class="calc-row">
+                        <span class="calc-label">Area Coverage:</span>
+                        <span class="calc-value">${calc.area}</span>
+                    </div>
+                    <div class="calc-row">
+                        <span class="calc-label">Sequestration Rate:</span>
+                        <span class="calc-value">${calc.sequestrationRate}</span>
+                    </div>
+                    <div class="calc-row">
+                        <span class="calc-label">Time Implemented:</span>
+                        <span class="calc-value">${calc.timeImplemented}</span>
+                    </div>
+                    <div class="calc-row">
+                        <span class="calc-label">Verification:</span>
+                        <span class="calc-value verification-${calc.verificationStatus.toLowerCase().replace(/[^a-z]/g, '')}">${calc.verificationStatus}</span>
+                    </div>
+                </div>
+                
+                <div class="calc-formula">
+                    <span class="calc-label">Calculation:</span>
+                    <code class="calc-code">${calc.calculation}</code>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    getPracticeIcon(practice) {
+        const icons = {
+            'Shade-grown Coffee': 'fa-tree',
+            'Organic Farming': 'fa-leaf',
+            'Agroforestry Systems': 'fa-seedling',
+            'Soil Conservation': 'fa-mountain',
+            'Natural Processing': 'fa-sun',
+            'Water Conservation': 'fa-tint',
+            'Biodiversity Protection': 'fa-dove',
+            'Organic Composting': 'fa-recycle'
+        };
+        return icons[practice] || 'fa-leaf';
+    }
+
+    displayCarbonTimeline(timeline) {
+        const container = document.getElementById('carbonTimeline');
+        
+        container.innerHTML = timeline.map((item, index) => `
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h4>${item.stage}</h4>
+                    <div class="timeline-period">${item.period}</div>
+                    <div class="timeline-impact">${item.co2Impact}</div>
+                    <p>${item.description}</p>
+                </div>
+            </div>
+        `).join('');
     }
 
     // Modal methods

@@ -16,6 +16,91 @@ const sampleData = {
             qualityScore: 88.5,
             certifications: ["organic", "fair-trade", "rainforest-alliance"],
             currentLocation: "Super Store Inc.",
+            carbonCredits: {
+                co2Sequestered: 2.8, // tonnes CO₂
+                creditsGenerated: 2.8,
+                estimatedValue: 168, // USD at $60/credit
+                farmingPractices: [
+                    {
+                        practice: "Shade-grown Coffee",
+                        impact: "1.2 tonnes CO₂",
+                        description: "Traditional shade cultivation preserves forest canopy"
+                    },
+                    {
+                        practice: "Organic Farming",
+                        impact: "0.8 tonnes CO₂",
+                        description: "No synthetic fertilizers or pesticides"
+                    },
+                    {
+                        practice: "Agroforestry Systems",
+                        impact: "0.6 tonnes CO₂",
+                        description: "Mixed tree species provide carbon sequestration"
+                    },
+                    {
+                        practice: "Soil Conservation",
+                        impact: "0.2 tonnes CO₂",
+                        description: "Terracing and composting improve soil carbon"
+                    }
+                ],
+                timeline: [
+                    {
+                        stage: "Planting & Growth",
+                        period: "Years 1-3",
+                        co2Impact: "0.5 tonnes/year",
+                        description: "Young coffee plants and shade trees establish"
+                    },
+                    {
+                        stage: "Mature Production",
+                        period: "Years 4-15",
+                        co2Impact: "1.2 tonnes/year",
+                        description: "Full canopy development maximizes carbon storage"
+                    },
+                    {
+                        stage: "Processing",
+                        period: "Harvest season",
+                        co2Impact: "0.1 tonnes saved",
+                        description: "Water recycling and composting waste"
+                    }
+                ],
+                calculationDetails: [
+                    {
+                        element: "Shade Trees",
+                        area: "80% of farm area (400 ha)",
+                        sequestrationRate: "3.5 tonnes CO₂/ha/year",
+                        timeImplemented: "10 years",
+                        verificationStatus: "Third-party verified",
+                        calculation: "400 × 0.8 × 3.5 × 0.1 = 1.12 tonnes CO₂",
+                        contribution: "40%"
+                    },
+                    {
+                        element: "Soil Carbon Storage",
+                        area: "100% of farm area (400 ha)",
+                        sequestrationRate: "1.8 tonnes CO₂/ha/year",
+                        timeImplemented: "8 years",
+                        verificationStatus: "Self-reported",
+                        calculation: "400 × 1.0 × 1.8 × 0.08 = 0.58 tonnes CO₂",
+                        contribution: "21%"
+                    },
+                    {
+                        element: "Composting System",
+                        area: "Processing facility",
+                        sequestrationRate: "0.5 tonnes CO₂/year",
+                        timeImplemented: "5 years",
+                        verificationStatus: "Third-party verified",
+                        calculation: "0.5 × 1.0 × 5 × 0.2 = 0.5 tonnes CO₂",
+                        contribution: "18%"
+                    },
+                    {
+                        element: "Reduced Machinery Use",
+                        area: "Farm operations",
+                        sequestrationRate: "0.6 tonnes CO₂ saved/year",
+                        timeImplemented: "6 years",
+                        verificationStatus: "Documented",
+                        calculation: "0.6 × 1.0 × 6 × 0.17 = 0.6 tonnes CO₂",
+                        contribution: "21%"
+                    }
+                ]
+            },
             supplyChain: [
                 {
                     id: 1,
@@ -131,6 +216,91 @@ const sampleData = {
             qualityScore: 86.2,
             certifications: ["organic", "fair-trade"],
             currentLocation: "Neighborhood Market",
+            carbonCredits: {
+                co2Sequestered: 3.2, // tonnes CO₂
+                creditsGenerated: 3.2,
+                estimatedValue: 192, // USD at $60/credit
+                farmingPractices: [
+                    {
+                        practice: "Natural Processing",
+                        impact: "1.0 tonnes CO₂",
+                        description: "Sun-drying reduces energy consumption"
+                    },
+                    {
+                        practice: "Water Conservation",
+                        impact: "0.6 tonnes CO₂",
+                        description: "Minimal water use in natural processing"
+                    },
+                    {
+                        practice: "Biodiversity Protection",
+                        impact: "1.2 tonnes CO₂",
+                        description: "Native forest preservation around farm"
+                    },
+                    {
+                        practice: "Organic Composting",
+                        impact: "0.4 tonnes CO₂",
+                        description: "Coffee pulp recycled as organic fertilizer"
+                    }
+                ],
+                timeline: [
+                    {
+                        stage: "Land Preparation",
+                        period: "Pre-planting",
+                        co2Impact: "0.3 tonnes saved",
+                        description: "No-till farming prevents soil carbon loss"
+                    },
+                    {
+                        stage: "Growing Season",
+                        period: "Annual cycle",
+                        co2Impact: "1.4 tonnes/year",
+                        description: "Native shade trees and coffee plants"
+                    },
+                    {
+                        stage: "Natural Processing",
+                        period: "Post-harvest",
+                        co2Impact: "0.5 tonnes saved",
+                        description: "Solar drying eliminates fossil fuel use"
+                    }
+                ],
+                calculationDetails: [
+                    {
+                        element: "Native Forest Preservation",
+                        area: "60% of farm area (300 ha)",
+                        sequestrationRate: "4.2 tonnes CO₂/ha/year",
+                        timeImplemented: "12 years",
+                        verificationStatus: "Government certified",
+                        calculation: "300 × 0.6 × 4.2 × 0.1 = 1.26 tonnes CO₂",
+                        contribution: "39%"
+                    },
+                    {
+                        element: "Natural Processing",
+                        area: "Processing facility",
+                        sequestrationRate: "0.8 tonnes CO₂ saved/year",
+                        timeImplemented: "8 years",
+                        verificationStatus: "Third-party verified",
+                        calculation: "0.8 × 1.0 × 8 × 0.15 = 0.96 tonnes CO₂",
+                        contribution: "30%"
+                    },
+                    {
+                        element: "Water Conservation",
+                        area: "Entire farm operations",
+                        sequestrationRate: "0.4 tonnes CO₂ saved/year",
+                        timeImplemented: "10 years",
+                        verificationStatus: "Self-monitored",
+                        calculation: "0.4 × 1.0 × 10 × 0.15 = 0.6 tonnes CO₂",
+                        contribution: "19%"
+                    },
+                    {
+                        element: "Organic Composting",
+                        area: "Farm waste management",
+                        sequestrationRate: "0.3 tonnes CO₂/year",
+                        timeImplemented: "7 years",
+                        verificationStatus: "Documented",
+                        calculation: "0.3 × 1.0 × 7 × 0.16 = 0.38 tonnes CO₂",
+                        contribution: "12%"
+                    }
+                ]
+            },
             supplyChain: [
                 {
                     id: 1,
