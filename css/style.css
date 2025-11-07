@@ -118,6 +118,17 @@ body::before {
     gap: var(--spacing-sm);
     font-weight: 700;
     font-size: var(--font-size-lg);
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease;
+}
+
+.logo:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .logo i {
@@ -1313,5 +1324,436 @@ body::before {
     .dropdown-btn, .qr-scan-btn {
         flex-shrink: 0;
         min-width: 160px;
+    }
+}
+
+/* Carbon Credits Console Styles */
+.carbon-credit-icon {
+    font-size: 3rem;
+    color: var(--forest-green);
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.carbon-calculator {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    margin-top: var(--spacing-lg);
+}
+
+.calculator-header {
+    background: var(--gradient-accent);
+    color: var(--white);
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.calculator-header h2 {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.batch-info {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    align-items: center;
+}
+
+.batch-id {
+    background: rgba(255, 255, 255, 0.2);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-family: var(--font-mono);
+}
+
+.batch-name {
+    font-style: italic;
+}
+
+.carbon-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+}
+
+.metric-card {
+    background: var(--gray-light);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-accent);
+}
+
+.metric-card.co2-sequestered::before {
+    background: var(--gradient-accent);
+}
+
+.metric-card.carbon-credits::before {
+    background: var(--gradient-secondary);
+}
+
+.metric-card.credit-value::before {
+    background: var(--gradient-gold);
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--forest-green);
+}
+
+.metric-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--forest-green);
+}
+
+.metric-content h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+    color: var(--coffee-dark);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: var(--spacing-xs);
+    font-family: var(--font-mono);
+}
+
+.metric-unit {
+    color: var(--gray-medium);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.practices-impact,
+.carbon-timeline,
+.calculation-details {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--gray-light);
+}
+
+.practices-impact h3,
+.carbon-timeline h3,
+.calculation-details h3 {
+    font-size: var(--font-size-lg);
+    color: var(--coffee-dark);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.calculation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.calculation-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--coffee-brown);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.calculation-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.calc-header h4 {
+    font-size: var(--font-size-md);
+    color: var(--coffee-dark);
+    margin: 0;
+}
+
+.calc-contribution {
+    background: var(--gradient-accent);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+.calc-details {
+    margin-bottom: var(--spacing-md);
+}
+
+.calc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+    padding: var(--spacing-xs) 0;
+}
+
+.calc-label {
+    color: var(--gray-medium);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.calc-value {
+    color: var(--coffee-dark);
+    font-weight: 600;
+    text-align: right;
+}
+
+.verification-thirdpartyverified,
+.verification-governmentcertified {
+    color: var(--forest-green);
+    background: rgba(34, 139, 34, 0.1);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+}
+
+.verification-selfreported,
+.verification-selfmonitored,
+.verification-documented {
+    color: var(--coffee-brown);
+    background: rgba(139, 69, 19, 0.1);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+}
+
+.calc-formula {
+    background: var(--gray-light);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--coffee-gold);
+}
+
+.calc-code {
+    font-family: 'Courier New', monospace;
+    font-size: var(--font-size-sm);
+    color: var(--coffee-dark);
+    font-weight: 600;
+    background: var(--white);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-xs);
+    display: block;
+    margin-top: var(--spacing-xs);
+}
+
+.calculation-formula {
+    background: var(--gray-light);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-md);
+}
+
+.calculation-formula h4 {
+    color: var(--coffee-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-md);
+}
+
+.formula-box {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--coffee-gold);
+}
+
+.formula-text {
+    font-family: 'Courier New', monospace;
+    font-size: var(--font-size-md);
+    color: var(--coffee-dark);
+    margin-bottom: var(--spacing-sm);
+    text-align: center;
+}
+
+.formula-explanation {
+    color: var(--gray-medium);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    text-align: center;
+    font-style: italic;
+}
+
+.practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.practice-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border-left: 4px solid var(--forest-green);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.practice-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.practice-icon {
+    font-size: 2rem;
+    color: var(--forest-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.practice-content h4 {
+    font-size: var(--font-size-md);
+    color: var(--coffee-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.practice-impact {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.practice-content p {
+    color: var(--gray-medium);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: var(--spacing-lg);
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gradient-accent);
+    border-radius: var(--radius-sm);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: var(--forest-green);
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: 0 0 0 3px var(--forest-green);
+}
+
+.timeline-content {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border-left: 3px solid var(--forest-green);
+}
+
+.timeline-content h4 {
+    font-size: var(--font-size-md);
+    color: var(--coffee-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.timeline-period {
+    font-size: var(--font-size-sm);
+    color: var(--gray-medium);
+    margin-bottom: var(--spacing-xs);
+    font-style: italic;
+}
+
+.timeline-impact {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--forest-green);
+    margin-bottom: var(--spacing-sm);
+}
+
+.timeline-content p {
+    color: var(--gray-medium);
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+}
+
+/* Mobile responsiveness for Carbon Credits */
+@media (max-width: 768px) {
+    .carbon-metrics {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-md);
+    }
+    
+    .practices-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .timeline-container {
+        padding-left: var(--spacing-md);
+    }
+    
+    .timeline-container::before {
+        left: 16px;
+    }
+    
+    .timeline-dot {
+        left: -24px;
+        width: 12px;
+        height: 12px;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
     }
 }
