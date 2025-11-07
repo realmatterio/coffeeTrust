@@ -73,6 +73,9 @@ class CoffeeBeanTrust {
         }
 
         // Modal events
+        document.getElementById('helpBtn').addEventListener('click', () => this.openModal('helpModal'));
+        document.getElementById('helpModalClose').addEventListener('click', () => this.closeModal('helpModal'));
+        document.getElementById('helpModalOverlay').addEventListener('click', () => this.closeModal('helpModal'));
         document.getElementById('batchModalClose').addEventListener('click', () => this.closeModal('batchModal'));
         document.getElementById('batchModalOverlay').addEventListener('click', () => this.closeModal('batchModal'));
         document.getElementById('certModalClose').addEventListener('click', () => this.closeModal('certModal'));
