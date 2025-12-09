@@ -306,5 +306,7 @@ Potential revenue (at 30 USD/tCO₂e)：
 ✔ VM0042 / VM0031 / VM0022 Requirement 
 ✔ MRV（Measurement, Reporting, Verification）Format
 
+https://chatgpt.com/s/t_69383a1644c88191965e03278daa8f22
+
 ---
 
