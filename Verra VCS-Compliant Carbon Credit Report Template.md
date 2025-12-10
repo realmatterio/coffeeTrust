@@ -2,11 +2,9 @@
 
 ## **Kume Coffee Agroforestry Carbon Project – Papua New Guinea**
 
-### *Markdown Version with Chinese Remarks & Image Captions*
-
 ---
 
-# 0. **Executive Summary**
+# **Executive Summary**
 
 The Kume Coffee Agroforestry Carbon Project covers 100 hectares of coffee-based agroforestry in Papua New Guinea. This report provides a Verra VCS-compliant quantification of GHG removals for the 2023 monitoring period.
 
@@ -16,13 +14,12 @@ $$ \approx 752 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
 ---
 
-### **Remarks（中文說明）**
-
-本段提供 Verra 報告必要的摘要格式。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 0.1 — Sentinel-2 view of Kume project area (example image placeholder)*
+
+> **Remarks（中文說明）**
+> 本段提供 Verra 報告必要的摘要格式。
 
 ---
 
@@ -50,17 +47,14 @@ $$ \approx 752 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
 * Sylvine WONG — Carbon Auditor
 * Elden CHAN — Green Technology Lead
-* Ming NG — Engineer
+* Ming-lam NG — Engineer
 
----
-
-### **Remarks（中文說明）**
-
-本章節為 VCS PDD（Project Description Document）標準格式。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 1.1 — Project area boundary overlaid on satellite map*
+
+> **Remarks**
+> 本章節為 VCS PDD（Project Description Document）標準格式。
 
 ---
 
@@ -97,13 +91,12 @@ $$ E_{\text{baseline}} = 245 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
 ---
 
-### **Remarks（中文說明）**
-
-Baseline 是 Verra 核心審核條件，本段明確列出土地歷史狀況與基線排放來源。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 2.1 — NDVI time series (2018–2022 baseline conditions)*
+
+> **Remarks（中文說明）**
+> Baseline 是 Verra 核心審核條件，本段明確列出土地歷史狀況與基線排放來源。
 
 ---
 
@@ -127,13 +120,12 @@ Baseline 是 Verra 核心審核條件，本段明確列出土地歷史狀況與�
 
 ---
 
-### **Remarks（中文說明）**
-
-此為專案活動描述，符合 Verra A/R 及 ALM 方法學要求。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 3.1 — UAV orthomosaic showing tree distribution and canopy structure*
+
+> **Remarks（中文說明）**
+> 此為專案活動描述，符合 Verra A/R 及 ALM 方法學要求。
 
 ---
 
@@ -151,13 +143,12 @@ $$ \text{Leakage} = 0 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
 ---
 
-### **Remarks（中文說明）**
-
-外溢（Leakage）在本專案屬零，符合 Verra 的 Activity-Shifting 條件。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 4.1 — Land-use classification confirming no displacement*
+
+> **Remarks（中文說明）**
+> 外溢（Leakage）在本專案屬零，符合 Verra 的 Activity-Shifting 條件。
 
 ---
 
@@ -178,13 +169,12 @@ $$ \text{Buffer} = 0.10 \times \text{Gross Removals} = 80 \text{ tCO}_{2}\text{e
 
 ---
 
-### **Remarks（中文說明）**
-
-所有 AFOLU 專案須強制扣 buffer，此處使用 10% 合理值。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 5.1 — Fire-risk zones and buffer index mapping*
+
+> **Remarks（中文說明）**
+> 所有 AFOLU 專案須強制扣 buffer，此處使用 10% 合理值。
 
 ---
 
@@ -215,13 +205,12 @@ Indices used:
 
 ---
 
-### **Remarks（中文說明）**
-
-本段為 MRV 核心，為 Verra 審核時最重要的監測描述。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 6.1 — Sample UAV-captured canopy height model (CHM)*
+
+> **Remarks（中文說明）**
+> 本段為 MRV 核心，為 Verra 審核時最重要的監測描述。
 
 ---
 
@@ -258,13 +247,12 @@ $$ CO_{2}\text{e}_{\text{biomass}} = 172 \times 3.67 = 631 \text{ tCO}_{2}\text{
 
 ---
 
-### **Remarks（中文說明）**
-
-此段所有 AGB 計算已修正，並符合 Chave 方程式與 AFOLU 量化要求。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 7.1 — Example DBH distribution histogram from field sampling*
+
+> **Remarks（中文說明）**
+> 此段所有 AGB 計算已修正，並符合 Chave 方程式與 AFOLU 量化要求。
 
 ---
 
@@ -280,13 +268,12 @@ $$ 55 \text{ tC} \approx 202 \text{ tCO}_{2}\text{e} $$
 
 ---
 
-### **Remarks（中文說明）**
-
-土壤碳固存使用年增率並換算為 CO₂e，方法學符合 ALM Tier 1 要求。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 7.2 — Soil organic matter improvement heatmap*
+
+> **Remarks（中文說明）**
+> 土壤碳固存使用年增率並換算為 CO₂e，方法學符合 ALM Tier 1 要求。
 
 ---
 
@@ -300,15 +287,12 @@ $$ 55 \text{ tC} \approx 202 \text{ tCO}_{2}\text{e} $$
 
 $$ E_{\text{project}} = 0.914 \text{ tCO}_{2}\text{e} $$
 
----
-
-### **Remarks（中文說明）**
-
-氮肥排放係數已修正，使用 IPCC Tier 1 方法。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 7.3 — Fertilizer application map (year 2023)*
+
+> **Remarks（中文說明）**
+> 氮肥排放係數已修正，使用 IPCC Tier 1 方法。
 
 ---
 
@@ -320,15 +304,12 @@ $$ \text{Net Before Buffer} = 833 - 0.914 = 832.1 $$
 
 $$ \text{Net After Buffer} = 832.1 - 80 = \boxed{752 \text{ tCO}_{2}\text{e yr}^{-1}} $$
 
----
-
-### **Remarks（中文說明）**
-
-最終淨固存符合 Verra 計算邏輯，扣除 buffer 後得到 VCU 可發行量。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 7.4 — Final GHG balance diagram*
+
+> **Remarks（中文說明）**
+> 最終淨固存符合 Verra 計算邏輯，扣除 buffer 後得到 VCU 可發行量。
 
 ---
 
@@ -341,15 +322,12 @@ $$ \text{Net After Buffer} = 832.1 - 80 = \boxed{752 \text{ tCO}_{2}\text{e yr}^
 * Farm activity logs: monthly (fertilizer, pesticide, burning)
 * QA/QC with third-party verification
 
----
-
-### **Remarks（中文說明）**
-
-監測計畫是下一期核發 VCU 的必要部分。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 8.1 — Annual monitoring schedule timeline*
+
+> **Remarks（中文說明）**
+> 監測計畫是下一期核發 VCU 的必要部分。
 
 ---
 
@@ -364,11 +342,8 @@ Required by Verra auditors:
 * GIS boundary (SHP)
 * Farmer management logs
 
----
-
-### **Remarks（中文說明）**
-
-列出審核所需資料，便於提交第三方（如 SCS、Control Union）。
+> **Remarks（中文說明）**
+> 列出審核所需資料，便於提交第三方（如 SCS、Control Union）。
 
 ---
 
@@ -380,15 +355,12 @@ Estimated market value (USD 30/tCO₂e):
 
 $$ \approx 22,560 \text{ USD} $$
 
----
-
-### **Remarks（中文說明）**
-
-此段列出 VCU（Verified Carbon Unit）的可估計金融價值。
-
-### **Image Caption（圖片說明）**
+### **Image Caption**
 
 *Figure 10.1 — VCU issuance summary chart*
+
+> **Remarks（中文說明）**
+> 此段列出 VCU（Verified Carbon Unit）的可估計金融價值。
 
 ---
 
