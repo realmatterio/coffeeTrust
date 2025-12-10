@@ -431,5 +431,10 @@ Estimated market value (USD 30/tCO₂e):
 
 ---
 
-# ✅
+# ✅ Checklist
+
+* ✔ Verra VCS Standard v4
+* ✔ AFOLU Non-Permanence Risk Tool
+* ✔ VM0042 / VM0031 / VM0022 Methodology 
+* ✔ MRV（Measurement, Reporting, Verification）Format
 
