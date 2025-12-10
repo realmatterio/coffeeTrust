@@ -12,8 +12,6 @@ The Kume Coffee Agroforestry Carbon Project covers 100 hectares of coffee-based 
 
 $$ \approx 752 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
----
-
 ### **Image Caption**
 
 *Figure 0.1 — Sentinel-2 view of Kume project area (example image placeholder)*
