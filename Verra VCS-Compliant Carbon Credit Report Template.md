@@ -1,5 +1,3 @@
-
-
 # 🌱 **Verra VCS-Compliant Carbon Credit Report**
 
 ## **Kume Coffee Agroforestry Carbon Project – Papua New Guinea**
@@ -14,9 +12,7 @@ The Kume Coffee Agroforestry Carbon Project covers 100 hectares of coffee-based 
 
 **Estimated net removals (post-buffer):**
 
-[
-\approx 752 ~\text{tCO₂e yr}^{-1}
-]
+$$ \approx 752 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
 ---
 
@@ -97,9 +93,7 @@ Baseline GHG emissions include:
 
 Baseline emissions:
 
-[
-E_{\text{baseline}} = 245 ~\text{tCO₂e yr}^{-1}
-]
+$$ E_{\text{baseline}} = 245 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
 ---
 
@@ -153,9 +147,7 @@ No agricultural displacement occurs; the project area remains fully under coffee
 
 No impact on external coffee markets; negligible.
 
-[
-\text{Leakage} = 0 ~\text{tCO₂e yr}^{-1}
-]
+$$ \text{Leakage} = 0 \text{ tCO}_{2}\text{e yr}^{-1} $$
 
 ---
 
@@ -182,9 +174,7 @@ Assessed using **VCS AFOLU Non-Permanence Risk Tool**.
 
 ### 10% Permanence Buffer
 
-[
-\text{Buffer} = 0.10 \times \text{Gross Removals} = 80 ~\text{tCO₂e}
-]
+$$ \text{Buffer} = 0.10 \times \text{Gross Removals} = 80 \text{ tCO}_{2}\text{e} $$
 
 ---
 
@@ -241,9 +231,7 @@ Indices used:
 
 ### Allometric Equation (Chave et al., 2014)
 
-[
-AGB = 0.0673 \cdot (\rho D^2 H)^{0.976}
-]
+$$ AGB = 0.0673 \cdot (\rho D^2 H)^{0.976} $$
 
 Where:
 
@@ -254,29 +242,19 @@ Where:
 ### Results
 
 * Coffee trees:
-  [
-  AGB_{\text{coffee}} \approx 29 ~\text{kg/tree}
-  ]
+  $$ AGB_{\text{coffee}} \approx 29 \text{ kg/tree} $$
 * Shade trees:
-  [
-  AGB_{\text{shade}} \approx 126 ~\text{kg/tree}
-  ]
+  $$ AGB_{\text{shade}} \approx 126 \text{ kg/tree} $$
 
-[
-AGB_{\text{total}} = 366 ~\text{t}
-]
+$$ AGB_{\text{total}} = 366 \text{ t} $$
 
 Convert to carbon:
 
-[
-C = 0.47 \cdot AGB = 172 ~\text{tC}
-]
+$$ C = 0.47 \cdot AGB = 172 \text{ tC} $$
 
 Convert to CO₂e:
 
-[
-CO₂e_{\text{biomass}} = 172 \times 3.67 = 631 ~\text{tCO₂e}
-]
+$$ CO_{2}\text{e}_{\text{biomass}} = 172 \times 3.67 = 631 \text{ tCO}_{2}\text{e} $$
 
 ---
 
@@ -294,15 +272,11 @@ CO₂e_{\text{biomass}} = 172 \times 3.67 = 631 ~\text{tCO₂e}
 
 Soil carbon gain rate:
 
-[
-0.55 ~ tC \cdot ha^{-1} \cdot yr^{-1}
-]
+$$ 0.55 \text{ tC} \cdot \text{ha}^{-1} \cdot \text{yr}^{-1} $$
 
 Across 100 ha:
 
-[
-55 ~tC \approx 202 ~tCO₂e
-]
+$$ 55 \text{ tC} \approx 202 \text{ tCO}_{2}\text{e} $$
 
 ---
 
@@ -324,9 +298,7 @@ Across 100 ha:
 | Pesticides       | 0.024 tCO₂e                |
 | Burning          | **0** (burning eliminated) |
 
-[
-E_{\text{project}} = 0.914 ~\text{tCO₂e}
-]
+$$ E_{\text{project}} = 0.914 \text{ tCO}_{2}\text{e} $$
 
 ---
 
@@ -342,18 +314,11 @@ E_{\text{project}} = 0.914 ~\text{tCO₂e}
 
 # 7.4 Net GHG Removals
 
-[
-\text{Gross Removals} = 631 + 202 = 833
-]
+$$ \text{Gross Removals} = 631 + 202 = 833 $$
 
-[
-\text{Net Before Buffer} = 833 - 0.914 = 832.1
-]
+$$ \text{Net Before Buffer} = 833 - 0.914 = 832.1 $$
 
-[
-\text{Net After Buffer} = 832.1 - 80 =
-\boxed{752 ~\text{tCO₂e yr}^{-1}}
-]
+$$ \text{Net After Buffer} = 832.1 - 80 = \boxed{752 \text{ tCO}_{2}\text{e yr}^{-1}} $$
 
 ---
 
@@ -409,15 +374,11 @@ Required by Verra auditors:
 
 # 10. **Carbon Credit Issuance**
 
-[
-\boxed{752 ~\text{VCUs Issuable for 2023}}
-]
+$$ \boxed{752 \text{ VCUs Issuable for 2023}} $$
 
 Estimated market value (USD 30/tCO₂e):
 
-[
-\approx 22,560 ~\text{USD}
-]
+$$ \approx 22,560 \text{ USD} $$
 
 ---
 
@@ -437,4 +398,3 @@ Estimated market value (USD 30/tCO₂e):
 * ✔ AFOLU Non-Permanence Risk Tool
 * ✔ VM0042 / VM0031 / VM0022 Methodology 
 * ✔ MRV（Measurement, Reporting, Verification）Format
-
