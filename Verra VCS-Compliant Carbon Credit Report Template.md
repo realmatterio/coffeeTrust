@@ -227,7 +227,7 @@ Indices used:
 
 # 7. **Quantification of Net GHG Removals**
 
-# 7.1 Above-Ground Biomass (AGB)
+## 7.1 Above-Ground Biomass (AGB)
 
 ### Allometric Equation (Chave et al., 2014)
 
@@ -268,7 +268,7 @@ $$ CO_{2}\text{e}_{\text{biomass}} = 172 \times 3.67 = 631 \text{ tCO}_{2}\text{
 
 ---
 
-# 7.2 Soil Organic Carbon (SOC)
+## 7.2 Soil Organic Carbon (SOC)
 
 Soil carbon gain rate:
 
@@ -290,7 +290,7 @@ $$ 55 \text{ tC} \approx 202 \text{ tCO}_{2}\text{e} $$
 
 ---
 
-# 7.3 Project Emissions
+## 7.3 Project Emissions
 
 | Source           | Emissions                  |
 | ---------------- | -------------------------- |
@@ -312,7 +312,7 @@ $$ E_{\text{project}} = 0.914 \text{ tCO}_{2}\text{e} $$
 
 ---
 
-# 7.4 Net GHG Removals
+## 7.4 Net GHG Removals
 
 $$ \text{Gross Removals} = 631 + 202 = 833 $$
 
