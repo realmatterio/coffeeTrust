@@ -222,7 +222,7 @@ $$ AGB = 0.0673 \cdot (\rho D^2 H)^{0.976} $$
 
 Where:
 
-* (\rho) = wood density
+* (ρ) = wood density
 * (D) = DBH
 * (H) = tree height
 
