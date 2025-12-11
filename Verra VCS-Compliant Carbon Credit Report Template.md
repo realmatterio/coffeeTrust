@@ -228,13 +228,13 @@ Where:
 
 ### Results
 
-* Coffee trees:
+* Coffee trees:<br>
 $$ AGB_{\text{coffee}} \approx 29 \text{ kg/tree} $$
 
-* Shade trees:
+* Shade trees:<br>
 $$ AGB_{\text{shade}} \approx 126 \text{ kg/tree} $$
 
-* Total:
+* Total:<br>
 $$ AGB_{\text{total}} = 366 \text{ t} $$
 
 Convert to carbon:
